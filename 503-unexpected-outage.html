@@ -1,0 +1,66 @@
+<!--
+Title: 503-unexpected-outage.html
+Purpose: Custom Apache 503 error page for unexpected system outages. Displays when
+         systems are experiencing unplanned technical difficulties to inform users
+         and provide troubleshooting guidance.
+Author: Mickael Asghar (DevOps Engineer)
+Created: 28th Apr 2025
+Last updated: 28th Apr 2025
+Important Notes: 
+    - Update the support phone number if it changes from 01925 386800
+    - Update the instance name in technical information if deploying to a different environment
+    - The 30-minute retry suggestion can be modified based on expected recovery time
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Service Temporarily Unavailable</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #e74c3c;
+        }
+        .contact {
+            margin-top: 20px;
+            font-style: italic;
+            color: #555;
+        }
+        .troubleshooting {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Service Temporarily Unavailable</h1>
+        <p>We're currently experiencing technical difficulties with our systems.</p>
+        <p>Our technical team is working to resolve this issue as quickly as possible.</p>
+        <p>We apologise for any inconvenience this may cause.</p>
+        <p class="troubleshooting">Please try to access the webpage later. If the issue persists, try refreshing the page or clearing your browser cache.</p>
+        <p class="contact">Please call our customer support on <XXXX XXXX> for assistance.</p>
+        <hr style="margin-top: 30px; margin-bottom: 20px; border: 0; border-top: 1px solid #eee;">
+        <div style="text-align: left; font-size: 14px; color: #777;">
+            <p><strong>Technical information:</strong></p>
+            <ul style="padding-left: 20px; margin-top: 5px;">
+                <li>Instance name: web-application-01</li>
+                <li>Status Code: 503 Service Unavailable</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
